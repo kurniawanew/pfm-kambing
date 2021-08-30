@@ -22,5 +22,11 @@ func (s *Server) initializeRoutes() {
 		authorized.PUT("/users/:id", s.UpdateUser)
 		authorized.DELETE("/users/:id", s.DeleteUser)
 		authorized.POST("/users/create", s.CreateUser)
+
+		authorized.GET("/transactions", s.GetTransactions)
+		authorized.GET("/transactions/:id", s.GetTransaction)
+		authorized.PUT("/transactions/:id", s.UpdateTransaction)
+		authorized.DELETE("/transactions/:id", s.DeleteTransaction)
+		authorized.POST("/transactions/create", s.CreateTransaction)
 	}
 }
